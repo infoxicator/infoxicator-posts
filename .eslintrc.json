@@ -1,0 +1,6 @@
+{
+  "extends": "amex",
+  "rules": {
+    "react/prop-types": 0
+  }
+}
