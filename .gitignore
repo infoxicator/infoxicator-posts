@@ -10,6 +10,7 @@ build
 .webpack-stats*
 bundle.integrity.manifest.json
 .build-cache
+module_map
 
 # test
 test-results
