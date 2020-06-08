@@ -15,7 +15,14 @@
   },
   "one-amex": {
     "bundler": {
-      "performanceBudget": 300000
+      "requiredExternals": [
+        "iguazu",
+        "iguazu-holocron",
+        "iguazu-rest"
+      ],
+      "purgecss": {
+        "disabled": true
+      }
     }
   },
   "dependencies": {
@@ -27,6 +34,7 @@
     "holocron": "^1.1.0",
     "iguazu": "^3.0.2",
     "iguazu-holocron": "^1.1.0",
+    "iguazu-rest": "^1.9.1",
     "iguazu-rpc": "^1.6.1",
     "node-fetch": "^2.6.0",
     "object-hash": "^2.0.3",
@@ -37,7 +45,7 @@
     "redux-immutable": "^4.0.0"
   },
   "devDependencies": {
-    "@americanexpress/one-app-bundler": "^6.0.0",
+    "@americanexpress/one-app-bundler": "^6.5.0",
     "amex-jest-preset-react": "^6.0.0",
     "babel-eslint": "^8.2.6",
     "babel-preset-amex": "^3.2.0",
