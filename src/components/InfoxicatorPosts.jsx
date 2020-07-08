@@ -25,9 +25,13 @@ InfoxicatorPosts.holocron = {
   },
 };
 
-export const loadDataAsProps = ({ store: { dispatch } }) => ({
-  posts: () => dispatch(queryCollection({ resource: 'posts', id: 'test' })),
-});
+export const loadDataAsProps = ({ store: { dispatch, getState } }) => {
+  const localeName = getState().getIn(['intl', 'activeLocale']);
+  const categoryId = localeName.startsWith('es') ? 23 : 22;
+  return {
+    posts: () => dispatch(queryCollection({ resource: 'posts', id: categoryId })),
+  };
+};
 
 loadDataAsProps.ssr = true;
 
