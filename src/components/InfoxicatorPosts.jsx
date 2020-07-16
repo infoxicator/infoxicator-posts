@@ -36,6 +36,6 @@ export const loadDataAsProps = ({ store: { dispatch, getState } }) => {
 loadDataAsProps.ssr = true;
 
 export default compose(
-  connectAsync({ loadDataAsProps }),
-  withRouter
+  withRouter,
+  connectAsync({ loadDataAsProps })
 )(InfoxicatorPosts);
